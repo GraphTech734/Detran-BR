@@ -1,0 +1,249 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+        margin-right: 40px;
+}
+
+#radio1:checked ~.navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~.navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~.navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~.navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+/*Carrosel de slide-------------------------------------------------------------------------------------------------*/
+
+
+.circulacao{
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
+    border-radius: 50px;
+    padding-bottom: 300px;
+}
+
+
+.Licenciamento{
+    text-align: right;
+    display: flex;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border-radius: 20px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+.Licenciamento:hover{
+    transform: scale(1.1);
+}
+
+.Infrações{
+    background: linear-gradient(45deg, #f7971e, #ffd200);
+    display: flex;
+    border-radius: 20px;
+    padding-right: 150px;
+    padding-bottom: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+   }
+   .Infrações:hover{
+    transform: scale(1.1);
+}
+
+.Sefaz{
+    background: linear-gradient(45deg, #7f00ff, #e100ff);
+    display: flex;
+    border-radius: 20px;
+    padding-right: 170px;
+    padding-bottom: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+.Sefaz:hover{
+    transform: scale(1.1);
+}
+
+
+
+.bxs-car {
+    position: relative;
+    padding: 19px;
+    font-size: 30px;
+    padding-left:0px ;
+}
+
+.bxs-error{
+    position: relative;
+    padding: 19px;
+    font-size: 30px;
+    padding-left:0px ;
+}
+
+.bxs-bank{
+    position: relative;
+    padding: 19px;
+    font-size: 30px;
+    padding-left:0px ;
+}
+
+.voltar{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.ajustar{
+    width: 50%;
+}
+
+@media (max-width: 320px) {
+    .ajustar {
+        width: 5px; /* Ajuste a largura para telas menores */
+    }
+}
+
+.tela_principal{
+    background-color: blanchedalmond;
+}
+
+/*Licenciamento----------------------------------------------------------------*/
+.fundo_Licenciamento{
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+
+}
+
+select, button {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.centralizar{
+    padding-bottom: 50%;
+    text-align: center;
+}
+
+.frase{
+    padding-left: 40px;
+    text-align: justify;
+    font-size: 30px;
+}
+
+@media (max-width: 321px) {
+    .frase {
+        font-size: 20px; /* Ajuste a largura para telas menores */
+        padding-left: 1px;
+    }
+}
+
+/*Infrações---------------------------------------------------------------------------*/
+.fundo_infracoes{
+    background: linear-gradient(45deg, #f7971e, #ffd200);
+}
+
+/*Sefaz---------------------------------------------------------------------------------*/
+.fundo_sefaz{
+    background: linear-gradient(45deg, #7f00ff, #e100ff);
+    color: white;
+}
+
