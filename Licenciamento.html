@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulte o Licenciamento, multas, sefaz e muito mais aqui">
+    <meta name="keywords" content="Detran, Licenciamento, multas, serviços">
+    <meta name="author" content="Graphtech">
+    <link rel="icon" href="Galeria/detran BR.gif" type="image/gif">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Garante que o corpo ocupe no mínimo 100% da altura da viewport */
+        }
+
+        .main-content { 
+            flex: 1; /* Faz o contêiner crescer e preencher o espaço disponível */ 
+            display: flex; justify-content: center; /* Centraliza o contêiner horizontalmente */ 
+            align-items: center; /* Centraliza o contêiner verticalmente */ 
+            text-align: center; 
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+        .voltar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .voltar a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .voltar a:hover {
+            transform: scale(1.1);
+        }
+        h1 {
+            margin: 10px 0;
+            font-weight: 600;
+        }
+        .frase {
+            font-size: 1rem;
+            margin: 15px 0;
+            color: #f0f0f0;
+        }
+        select, button {
+            font-size: 1rem;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            width: 100%;
+        }
+        select {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            cursor: pointer;
+        }
+        button {
+            background: #00ff88;
+            color: black;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: 700;
+        }
+        button:hover {
+            background: #02f860;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+
+        select option {
+            background-color: #f0f8ff; /* Cor de fundo do dropdown */
+            color: black;          /* Cor do texto */
+        }
+
+        footer { 
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #ccc; /* Cor cinza clara */ 
+            justify-content: center; 
+            align-items: center; 
+            display: flex;
+            width: 100%;
+            margin-top: auto;
+                 
+            }
+    </style>
+    <title>Consulta Licenciamento</title>
+</head>
+<body>
+    <div class="voltar">
+        <a href="index.html" title="Voltar">
+            <i class='bx bxs-left-arrow-circle'></i>
+        </a>
+    </div>
+    <div class="main-content">
+    <div class="container">
+        <h1>Consulta de Licenciamento</h1>
+        <p class="frase">
+            Consulte seus débitos de licenciamento, restrições como furto e roubo, alienação, comunicado de venda ou restrição administrativa.
+        </p>
+    <select id="estado" onchange="mostrarBotao()">
+        <option value="">Selecione o estado</option>
+        <option value="https://www.ac.getran.com.br/site/apps/veiculo/consulta/filtro-consulta-veiculo.jsp">Acre (AC)</option>
+        <option value="https://www.detran.al.gov.br/veiculos/">Alagoas (AL)</option>
+        <option value="https://www.ap.getran.com.br/site/apps/veiculo/consulta/filtro-consulta-veiculo.jsp">Amapá (AP)</option>
+        <option value="https://digital.detran.am.gov.br/#focoMenu">Amazonas (AM)</option>
+        <option value="https://servicos.detran.ba.gov.br/veiculos/licenciamentoinfracoes">Bahia (BA)</option>
+        <option value="https://sistemas.detran.ce.gov.br/central/veiculos/principal">Ceará (CE)</option>
+        <option value="https://portal.detran.df.gov.br/#/home">Distrito Federal (DF)</option>
+        <option value="https://publicodetran.es.gov.br/boletolicenciamento/consultaBoletoLicenciamento.asp">Espírito Santo (ES)</option>
+        <option value="https://www.go.gov.br/servicos/servico-id/1138">Goiás (GO)</option>
+        <option value="https://portal.detrannet.detran.ma.gov.br/Veiculo/Veiculos.cshtml">Maranhão (MA)</option>
+        <option value="https://www.detran.mt.gov.br/">Mato Grosso (MT)</option>
+        <option value="https://www.meudetran.ms.gov.br/veiculo.php#">Mato Grosso do Sul (MS) </option>
+        <option value="https://transito.mg.gov.br/veiculos/situacao-do-veiculo/consultar-situacao-do-veiculo">Minas Gerais (MG)</option>
+        <option value="https://sistemas-renavam.detran.pa.gov.br/sistransito/detran-web/servicos/veiculos/indexRenavam.jsf">Pará (PA)</option>
+        <option value="https://detran.pb.gov.br/formularios/licenciamento">Paraíba (PB)</option>
+        <option value="https://www.extratodebito.detran.pr.gov.br/detranextratos/geraExtrato.do?action=iniciarProcesso">Paraná (PR) </option>
+        <option value="https://online5.detran.pe.gov.br/ServicosWeb/VeiculoMVC/ConsultaPlaca/ConsultarPlaca">Pernambuco (PE)</option>
+        <option value="http://taxas.detran.pi.gov.br/licenciamento/index.jsf">Piauí (PI)</option>
+        <option value="https://www.detran.rj.gov.br/_monta_aplicacoes.asp?cod=16&tipo=consulta_multa">Rio de Janeiro (RJ)</option>
+        <option value="https://portal.detran.rn.gov.br/#/login">Rio Grande do Norte (RN)</option>
+        <option value="https://pcsdetran.rs.gov.br/">Rio Grande do Sul (RS)</option>
+        <option value="https://centralservicos.detran.ro.gov.br/consulta/veiculo">Rondônia (RO)</option>
+        <option value="https://www.rr.getran.com.br/site/apps/veiculo/filtroplacarenavam-consultaveiculo.jsp">Roraima (RR)</option>
+        <option value="https://www.detran.sc.gov.br/consulta-veiculos/">Santa Catarina (SC)</option>
+        <option value="https://www.ipva.fazenda.sp.gov.br/IPVANET_Consulta/Consulta.aspx">São Paulo (SP) </option>
+        <option value="https://www.detran.se.gov.br/portal/?pg=pag_licenc_boleto_parcel">Sergipe (SE)</option>
+        <option value="https://www.to.gov.br/detran/veiculos">Tocantins (TO)</option>
+    </select>
+    <center>
+    <button  id="consultar" style="display:none;" onclick="consultar()">Consultar</button>
+    </center>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <footer>
+
+        &copy;
+        <p>Todos os Direitos Reservados</p>
+    
+    </footer>
+
+</body>
+
+</html>
